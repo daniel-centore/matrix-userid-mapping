@@ -43,6 +43,9 @@ describe('#toMxid()', function() {
 	it("Doesn't escape underscores if escapeUpper=false", function() {
 		assert.equal('daniel_centore', muid.toMxid("daniel_centore", false));
 	});
+	it("Handles email addresses", function() {
+		assert.equal('example.example=40gmail.com', muid.toMxid("example.example@gmail.com", false));
+	});
 });
 describe('#fromMxid()', function() {
 	var x = '';
@@ -85,6 +88,9 @@ describe('#fromMxid()', function() {
 	});
 	it("Doesn't treat underscore as escape if escapeUpper=false", function() {
 		assert.equal(x = 'daniel_centore', muid.fromMxid(muid.toMxid(x, false), false));
+	});
+	it("Handles email addresses", function() {
+		assert.equal(x = 'example.example=40gmail.com', muid.fromMxid(muid.toMxid(x, false), false));
 	});
 	it("Errs on invalid underscore escape sequence", function() {
 		assert.throws(function () {
