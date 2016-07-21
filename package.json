@@ -1,0 +1,30 @@
+{
+  "name": "matrix-userid-mapping",
+  "version": "0.1.0",
+  "description": "Handles mapping from UTF-8 to Matrix userid allowable grammar and back",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daniel-centore/matrix-userid-mapping.git"
+  },
+  "keywords": [
+    "matrix",
+    "userid"
+  ],
+  "author": "daniel-centore",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/daniel-centore/matrix-userid-mapping/issues"
+  },
+  "homepage": "https://github.com/daniel-centore/matrix-userid-mapping#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3"
+  },
+  "dependencies": {
+    "text-encoding": "^0.6.0"
+  }
+}
