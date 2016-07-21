@@ -63,7 +63,8 @@ exports.fromMxid = function(input, escapeUpper=true) {
 					bytes.push('_'.charCodeAt(0));
 				}
 				else {
-					throw new Error('Error: Underscore escaped an invalid character: ' + chars[i] + " in [" + input + "]");
+					throw new Error('Error: Underscore escaped an invalid character: ' + chars[i]
+						+ " in [" + input + "]");
 				}
 			} else {
 				bytes.push(chars[i].charCodeAt(0));
@@ -75,7 +76,8 @@ exports.fromMxid = function(input, escapeUpper=true) {
 			i += 2;
 		}
 		else {
-			throw new Error('Error: Underscore escaped an invalid character: ' + chars[i] + " in [" + input + "]");
+			throw new Error('Error: Underscore escaped an invalid character: ' + chars[i]
+				+ " in [" + input + "]");
 		}
 	}
 	return new tx.TextDecoder("utf-8").decode(new Uint8Array(bytes));
