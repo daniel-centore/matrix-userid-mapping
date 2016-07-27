@@ -1,6 +1,6 @@
 {
   "name": "matrix-userid-mapping",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Handles mapping from UTF-8 to Matrix userid allowable grammar and back",
   "main": "index.js",
   "scripts": {
