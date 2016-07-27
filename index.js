@@ -45,7 +45,7 @@ module.exports.toMxid = function(input, escapeUpper=true) {
   * @param {string} input : The mapped MXID
   * @param {boolean} [escapeUpper=true] : Was the original string encoded preserving uppercase information?
   */
-exports.fromMxid = function(input, escapeUpper=true) {
+module.exports.fromMxid = function(input, escapeUpper=true) {
     let chars = Array.from(input);
     var bytes = [];
     
@@ -76,7 +76,7 @@ exports.fromMxid = function(input, escapeUpper=true) {
             i += 2;
         }
         else {
-            throw new Error('Error: Underscore escaped an invalid character: ' + chars[i]
+            throw new Error('Error: Contained an invalid character: ' + chars[i]
                 + " in [" + input + "]");
         }
     }

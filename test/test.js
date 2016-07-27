@@ -90,7 +90,7 @@ describe('#fromMxid()', function() {
         assert.equal(x = 'daniel_centore', muid.fromMxid(muid.toMxid(x, false), false));
     });
     it("Handles email addresses", function() {
-        assert.equal(x = 'example.example=40gmail.com', muid.fromMxid(muid.toMxid(x, false), false));
+        assert.equal(x = 'example.example@gmail.com', muid.fromMxid(muid.toMxid(x, false), false));
     });
     it("Errs on invalid underscore escape sequence", function() {
         assert.throws(function () {
